@@ -1,0 +1,72 @@
+<!Doctype HTML>
+<html lang="en">
+</html>
+<head>
+    <meta charset="utf_8"/>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <title>Calculator</title>
+    <style>
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+
+        /* Firefox */
+        input[type=number] {
+          -moz-appearance: textfield;
+        }
+
+        input[type=number] {
+          appearance: textfield;
+        }
+      </style>
+  </head>
+</head>
+<body>
+    <div class="main-container">
+        <div class="main-container__inner-container">
+           <h2 class="main-container__top-text">SPLI <br> TTER</h2>
+        <div class="inner-container__interactive-fields">
+            <form class="interactive-fields__form-block" method="post" action="/">
+                <div class="form-block__input-wrapper">
+                    <label class="form-block__name">Bill</label>
+                    <img src="images/icon-dollar.svg" class="form-block__dollar-svg" alt="иконка доллар">
+                    <input type="number" class="form-block__bill" placeholder="0">
+                </div>
+                <label class="form-block__name">Select tip %</label>
+                <div class="form-block__button-wrapper">
+                    <button class="form-block__percent">5 %</button>
+                    <button class="form-block__percent">10%</button>
+                    <button class="form-block__percent">15%</button>
+                    <button class="form-block__percent">25%</button>
+                    <button class="form-block__percent">50%</button>
+                    <input type="number" class="form-block__percent--custom" placeholder="Custom">
+                </div> 
+                <div class="form-block__input-wrapper">
+                    <label class="form-block__name">Number of People</label>
+                    <span class="num-of-people__error-message">Cant be zero</span>
+                    <img src="images/icon-person.svg" class="form-block__person-svg" alt="иконка человек">
+                    <input type="number" class="form-block__num-of-people" placeholder="0">
+                </div>
+            </form>
+        </div>
+            <div class="inner-container__right-cont"> 
+                <div class="right-cont__tip-amount-total">
+                    <span class="tip-amount">Tip Amount <br>/ person</span>
+                    <span class="tip-amount__counter">$0.00</span>
+                </div>
+                <div class="right-cont__tip-amount-total">
+                    <span class="tip-amount">Total <br>/ person</span>
+                    <span class="tip-amount__counter">$0.00</span>
+                </div>
+                <div class="right-cont__button-wrapper">
+                 <button type="reset" class="right-cont__reset-button">RESET</button>
+                </div>
+            </div>
+       </div>
+    </div>
+</body>
