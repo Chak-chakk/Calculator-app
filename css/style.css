@@ -15,6 +15,30 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
 
 
+:root{
+    --font-style: 'Space Mono', monospace;
+    --font-size-1: 0.8em;
+    --font-size-2: 1.2em;
+    --font-size-3: 1.3em;
+    --bg-color-1: #f3f8fb;
+    --bg-color-2: #00474b;
+    --light-color: #9fe8df;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=number] {
+    appearance: textfield;
+}
+
 img{
     width: 100%;
 }
@@ -62,8 +86,9 @@ input{
 .form-block__name{
     font-family:  'Space Mono', monospace;
     color: #446366;
-    font-size: 0.8em;
+    font-size: var(--font-size-1);
     padding: 5px 10px;
+    cursor: pointer;
 }
 
 .form-block__dollar-svg{
@@ -74,23 +99,23 @@ input{
     top: 60px;
 }
 
-.form-block__bill{
+.form-block-input{
     font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
-    background-color: #f3f8fb;
+    font-size: var(--font-size-3);
+    background-color: var(--bg-color-1);
     width: 98%;
     padding: 10px 10px;
     border-radius: 5px;
     margin-top: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     cursor: pointer;
     text-align: end;
     color: #00474b;
     border: 3px solid transparent;
 }
 
-.form-block__bill:focus{
-    border: 3px solid #23c1aa;
+.form-block-input:focus{
+    border: 3px solid var(--light-color);
 }
 
 .form-block__button-wrapper{
@@ -100,24 +125,29 @@ input{
 
 .form-block__percent{
     padding: 8px 35px;
-    background-color: #00474b;
+    background-color: var(--bg-color-2);
     font-family: 'Space Mono', monospace;
-    font-size: 1.2em;
+    font-size: var(--font-size-2);
     color: #fefefe;
     border-radius: 5px;
-    margin: 10px 3px;
+    margin: 5px 3px;
 }
 
 .form-block__percent:hover{
-    background-color: #9fe8df;
+    background-color: var(--light-color);
     color: #00474b;
 }
 
-.form-block__percent--custom{
+.form-block__percent--selected{
+    background-color: var(--light-color);
+    color: var(--bg-color-2);
+}
+
+.form-block__percent__custom{
     padding: 8px 13px;
     font-family: 'Space Mono', monospace;
-    font-size: 1.2em;
-    background-color: #f3f8fb;
+    font-size: var(--font-size-2);
+    background-color: var(--bg-color-1);
     border-radius: 5px;
     margin: 10px 3px;
     color: #00474b;
@@ -126,41 +156,11 @@ input{
     border: 3px solid transparent;
 }
 
-.form-block__percent--custom:focus{
-    border: 3px solid #23c1aa;
+.form-block__percent__custom:focus{
+    border: 3px solid var(--light-color);
 }
 
-.form-block__num-of-people{
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
-    background-color: #f3f8fb;
-    width: 98%;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    text-align: end;
-    color: #00474b;
-    border: 3px solid transparent;
-}
-
-.form-block__num-of-people:focus{
-    border: 3px solid #23c1aa;
-}
-
-.form-block__num-of-people--error{
-    font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
-    background-color: #f3f8fb;
-    width: 98%;
-    padding: 10px 10px;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-    cursor: pointer;
-    text-align: end;
-    color: #00474b;
+ .form-block-input--error{
     border: 3px solid #d29d92;
 }
 
@@ -168,7 +168,7 @@ input{
     display: none;
     font-family:  'Space Mono', monospace;
     color: #da948a;
-    font-size: 0.9em;
+    font-size: var(--font-size-1);
     padding: 5px 10px;
     margin-left: 85px;
 }
@@ -178,7 +178,7 @@ input{
     z-index: 2;
     width: 10px;
     left: 38px;
-    bottom: 70px;
+    bottom: 60px;
 }
 
 .inner-container__right-cont{
@@ -186,7 +186,7 @@ input{
     width: 50%;
     margin: 20px;
     border-radius: 15px;
-    background-color: #00474b;
+    background-color: var(--bg-color-2);
 }
 
 .right-cont__tip-amount-total{
@@ -199,18 +199,18 @@ input{
 
 .tip-amount{
     padding: 32px 34px;
-    font-size: 0.8em;
+    font-size: var(--font-size-1);
 }
 
 .tip-amount__counter{
     padding: 30px 30px;
     font-size: 2.5em;
-    color: #23c3ac;
+    color: var(--light-color);
 }
 
 .right-cont__reset-button{
     font-family: 'Space Mono', monospace;
-    font-size: 1.3em;
+    font-size: var(--font-size-3);
     background-color: #0d686d;
     color: #01585d;
     position: absolute;
@@ -222,7 +222,7 @@ input{
 }
 
 .right-cont__reset-button:hover{
-    background-color: #9fe8df;
+    background-color: var(--light-color);
 }
 
 @font-face{
