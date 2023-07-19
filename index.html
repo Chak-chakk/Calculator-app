@@ -8,7 +8,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
         <title>Calculator</title>
     </head>
-    </head>
     <body>
         <div  class="main-container">
             <div  class="main-container__inner-container">
@@ -16,9 +15,9 @@
                     <div  class="inner-container__interactive-fields">
                         <form  class="interactive-fields__form-block" method="post" action="/">
                             <div  class="form-block__input-wrapper">
-                                <label  class="form-block__name" for="form-block-input-id">Bill</label>
+                                <label  class="form-block__name" for="form-block-input-bill-id">Bill</label>
                                 <img src="images/icon-dollar.svg"  class="form-block__dollar-svg" alt="иконка доллар">
-                                <input type="number" id="form-block-input-id"  class="form-block-input" placeholder="0">
+                                <input type="number" id="form-block-input-bill-id"  class="form-block-input" placeholder="0">
                             </div>
                             <label  class="form-block__name">Select tip %</label>
                             <div  class="form-block__button-wrapper">
@@ -27,13 +26,13 @@
                                 <button type="button" value="15" class="form-block__percent">15%</button>
                                 <button type="button" value="25" class="form-block__percent">25%</button>
                                 <button type="button" value="50" class="form-block__percent">50%</button>
-                                <input type="number" id="form-block__percent__custom-id" class="form-block__percent__custom" placeholder="Custom">
+                                <input type="number" id="form-block__percent__custom-id" class="form-block-input form-block-input__custom" placeholder="Custom">
                             </div> 
                             <div  class="form-block__input-wrapper">
                                 <label  class="form-block__name" for="form-block-input-id__num-people">Number of People</label>
-                                <span  class="num-of-people__error-message">Cant be zero</span>
+                                <span  class="error-message">Cant be zero</span>
                                 <img src="images/icon-person.svg"  class="form-block__person-svg" alt="иконка человек">
-                                <input type="number" id="form-block-input-id__num-people"  class="form-block-input form-block-input" placeholder="0">
+                                <input type="number" id="form-block-input-id__num-people"  class="form-block-input " placeholder="0">
                             </div>
                         </form>
                     </div>
@@ -46,10 +45,8 @@
                             <span  class="tip-amount">Total <br>/ person</span>
                             <span  class="tip-amount__counter total-amount__counter">$0.00</span>
                         </div>
-                        <form id="right-cont__form-button-reset-id" class="right-cont__button-reset" method="post" action="/">
-                            <div  class="right-cont__button-wrapper">
-                            <button type="reset" id="right-cont__reset-id" class="right-cont__reset-button" >RESET</button>
-                        </form>
+                        <div  class="right-cont__button-wrapper">
+                        <button type="reset" id="right-cont__reset-id" class="right-cont__reset-button">RESET</button>
                     </div>
                 </div>
             </div>

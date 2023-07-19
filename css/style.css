@@ -143,30 +143,22 @@ input{
     color: var(--bg-color-2);
 }
 
-.form-block__percent__custom{
+.form-block-input__custom{
     padding: 8px 13px;
-    font-family: 'Space Mono', monospace;
-    font-size: var(--font-size-2);
-    background-color: var(--bg-color-1);
-    border-radius: 5px;
     margin: 10px 3px;
-    color: #00474b;
     width: 30%;
-    cursor: pointer;
-    border: 3px solid transparent;
 }
 
-.form-block__percent__custom:focus{
+.form-block-input__custom:focus{
     border: 3px solid var(--light-color);
 }
 
- .form-block-input--error{
+.form-block__input-wrapper--error input.error{
     border: 3px solid #d29d92;
 }
 
-.num-of-people__error-message{
-    display: none;
-    font-family:  'Space Mono', monospace;
+.error-message{
+    font-family: 'Space Mono', monospace;
     color: #da948a;
     font-size: var(--font-size-1);
     padding: 5px 10px;
