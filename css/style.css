@@ -143,13 +143,13 @@ input{
     color: var(--bg-color-2);
 }
 
-.form-block-input__custom{
+.form-block-input--custom{
     padding: 8px 13px;
     margin: 10px 3px;
     width: 30%;
 }
 
-.form-block-input__custom:focus{
+.form-block-input--custom:focus{
     border: 3px solid var(--light-color);
 }
 

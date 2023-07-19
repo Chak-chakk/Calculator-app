@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const inputElements = document.querySelectorAll(".form-block-input");
   
   let billValue = 0;
-  let customValue = 0;
+  let selectedPercent = 0;
   let peopleValue = 0;
 
   inputElements.forEach(input => {
@@ -30,6 +30,14 @@ document.addEventListener("DOMContentLoaded", () => {
   inputNumPeople.addEventListener("change", (event) => {
     peopleValue = event.target.value;
   });
+
+  function render(){
+    let tipResult = getTipAmount(billValue, selectedPercent, peopleValue);
+    tipAmountSpan.textContent = tipResult;
+
+    let totalResult = getTotalAmount(billValue, tipResult, peopleValue);
+    totalAmountSpan.textContent = totalResult;
+  };
 
   
   const getTipAmount = function (billValue, selectedPercent, peopleValue) {
@@ -60,31 +68,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
       el.classList.add(selectedClass);
 
-      let selectedPercent = el.value;
+      selectedPercent = el.value;
+      
+      customPercent.value = '';
 
-      let tipResult = getTipAmount(billValue, selectedPercent, peopleValue);
-      tipAmountSpan.textContent = tipResult;
-
-      let totalResult = getTotalAmount(billValue, tipResult, peopleValue);
-      totalAmountSpan.textContent = totalResult;
+      render();
     }
   });
 
   customPercent.addEventListener("change", (event) => {
-    const selectedPercent = event.target.value;
+    selectedPercent = event.target.value;
     const selectedClass = 'form-block__percent--selected';
     
     percents.forEach(btn => {
       btn.classList.toggle(selectedClass, btn.value === selectedPercent);
     });
-    
-    customPercent.value = '';
 
-    const tipResult = getTipAmount(billValue, selectedPercent, peopleValue);
-    tipAmountSpan.textContent = tipResult;
-  
-    const totalResult = getTotalAmount(billValue, tipResult, peopleValue);
-    totalAmountSpan.textContent = totalResult;
+    render();
   });
 
   buttonReset.addEventListener('click', () => {
