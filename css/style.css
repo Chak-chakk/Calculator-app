@@ -50,8 +50,7 @@ input{
 .main-container {
     position: relative;
     box-sizing: border-box;
-    width: 100%;
-    height: 100%;
+    margin: auto;
     padding: 10px;
     background-color: #c5e4e7;
 }
@@ -85,15 +84,16 @@ input{
 
 .form-block__name{
     font-family:  'Space Mono', monospace;
-    color: #446366;
     font-size: var(--font-size-1);
+    font-weight: 700;
+    color: #446366;
     padding: 5px 10px;
     cursor: pointer;
 }
 
 .form-block__dollar-svg{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 10px;
     left: 38px;
     top: 60px;
@@ -103,6 +103,7 @@ input{
     font-family: 'Space Mono', monospace;
     font-size: var(--font-size-3);
     background-color: var(--bg-color-1);
+    font-weight: 700;
     width: 98%;
     padding: 10px 10px;
     border-radius: 5px;
@@ -112,6 +113,7 @@ input{
     text-align: end;
     color: #00474b;
     border: 3px solid transparent;
+    
 }
 
 .form-block-input:focus{
@@ -120,17 +122,22 @@ input{
 
 .form-block__button-wrapper{
     font-family: 'Space Mono', monospace;
-    margin-bottom:30px
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .form-block__percent{
-    padding: 8px 35px;
+    padding: 15px 35px;
     background-color: var(--bg-color-2);
     font-family: 'Space Mono', monospace;
     font-size: var(--font-size-2);
+    font-weight: 700;
     color: #fefefe;
     border-radius: 5px;
     margin: 5px 3px;
+    width: 30%;
 }
 
 .form-block__percent:hover{
@@ -145,8 +152,10 @@ input{
 
 .form-block-input--custom{
     padding: 8px 13px;
-    margin: 10px 3px;
+    margin: 6px 4px;
     width: 30%;
+    text-align: center;
+    font-size: var(--font-size-2);
 }
 
 .form-block-input--custom:focus{
@@ -167,7 +176,7 @@ input{
 
 .form-block__person-svg{
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     width: 10px;
     left: 38px;
     bottom: 60px;
@@ -179,6 +188,7 @@ input{
     margin: 20px;
     border-radius: 15px;
     background-color: var(--bg-color-2);
+    font-weight: 700;
 }
 
 .right-cont__tip-amount-total{
@@ -203,6 +213,7 @@ input{
 .right-cont__reset-button{
     font-family: 'Space Mono', monospace;
     font-size: var(--font-size-3);
+    font-weight: 700;
     background-color: #0d686d;
     color: #01585d;
     position: absolute;
@@ -217,9 +228,3 @@ input{
     background-color: var(--light-color);
 }
 
-@font-face{
-    font-family: 'Space Mono', monospace;
-    src: url(../fonts/Space_Mono/SpaceMono-Bold.ttf) format("truetype");
-    font-weight: 700;
-    font-size: 1em;
-}
